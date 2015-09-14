@@ -54,7 +54,7 @@ implementation {
 
       components new TimerMilliC() as gotrts_sleepTimer;
       components new TimerMilliC() as RTSwaitTimer;
-      components new cTimerMilliC() as CTSwaitTimer;
+      components new TimerMilliC() as CTSwaitTimer;
       components new TimerMilliC() as SYNwaitTimer;
       components new TimerMilliC() as activeTimer;
       components new TimerMilliC() as sleepTimer;
