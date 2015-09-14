@@ -167,13 +167,13 @@ event void sleepTimer.fired() {
 	  if ( !sweepMe ){}
 	#endif
 	
-	#if defined(CSMA)
+	#if defined(BMAC)
         signal Control.startDone(SUCCESS);
     #endif
   }
 
   task void stopDoneTask() {
-     #if defined(CSMA)
+     #if defined(BMAC)
         running = FALSE;
         signal Control.stopDone(SUCCESS);
      #endif
@@ -246,7 +246,7 @@ event void sleepTimer.fired() {
 	  //call Energy.send_done(destNode, sendingLength, SUCCESS);
 	#endif
 	
-	#if defined(CSMA)	
+	#if defined(BMAC)	
 		signal Packet.sendDone(msg, running? SUCCESS:EOFF);
 	#endif
   }
